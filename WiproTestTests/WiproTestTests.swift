@@ -9,26 +9,71 @@
 import XCTest
 @testable import WiproTest
 
-class WiproTestTests: XCTestCase {
+class WiproTestTests: XCTestCase, CanadaInfoDataSource {
+    
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var viewController: CanadaInfoViewController?
+    var expectation: XCTestExpectation?
+    var data = [CanadaInfoRow]()
+    var errorInfo = String()
+    
+    
+    override func setUpWithError() throws
+    {
+        viewController = CanadaInfoViewController()
+        let _ = viewController?.loadViewIfNeeded()
+        
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        viewController?.canadaViewModel.delegate = nil
+        viewController = nil
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    
+    func testCanadaInfoDelegate()
+    {
+        let canadaMngr = CanadaViewModel()
+        canadaMngr.delegate = self
+        
+        /// Act
+        expectation = expectation(description: "CanadaInfoData updates") // 3
+        canadaMngr.getDataFromAPI()
+        /// Assert
+        waitForExpectations(timeout: 10) // 4
+        
+        do {
+            let result = try XCTUnwrap(data)
+            XCTAssertEqual(result.count, 14)
+        } catch  {
+            print(error.localizedDescription)
         }
+       
     }
-
+    
+    func testPullToRefresh()
+     {
+        let _ = viewController?.loadViewIfNeeded()
+        viewController?.refreshControl.sendActions(for: .valueChanged)
+        XCTAssert(((viewController?.refreshControl.attributedTitle) != nil))
+      }
+    
+    func getCanadaInfoData(data: [CanadaInfoRow], title: String) {
+        if expectation != nil {
+            self.data = data
+        }
+        expectation?.fulfill()
+        expectation = nil
+    }
+    
+    func dataErrorInfo(errorInfo: String) {
+        //dataError
+        if expectation != nil {
+            self.errorInfo = errorInfo
+        }
+        expectation?.fulfill()
+        expectation = nil
+    }
+    
+   
 }

@@ -18,7 +18,7 @@
 		488F9159256E7D4E00747D13 /* CIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488F9155256E7D4E00747D13 /* CIError.swift */; };
 		488F915D256E7DF600747D13 /* WiproWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488F915C256E7DF600747D13 /* WiproWebService.swift */; };
 		488F9169256E89A400747D13 /* CanadaInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488F9168256E89A400747D13 /* CanadaInfoModel.swift */; };
-		488F916E256E8BBD00747D13 /* CanadaInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488F916D256E8BBD00747D13 /* CanadaInfoPresenter.swift */; };
+		488F916E256E8BBD00747D13 /* CanadaInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488F916D256E8BBD00747D13 /* CanadaInfoViewModel.swift */; };
 		4892CFDA2570E6FB0008945D /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 4892CFA32570E6FA0008945D /* UIImage+WebP.m */; };
 		4892CFDB2570E6FB0008945D /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4892CFA42570E6FA0008945D /* MKAnnotationView+WebCache.m */; };
 		4892CFDC2570E6FB0008945D /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4892CFAA2570E6FA0008945D /* SDWebImageManager.m */; };
@@ -52,6 +52,8 @@
 		4892D0142570EA2B0008945D /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4892D00E2570EA2B0008945D /* SVIndefiniteAnimatedView.m */; };
 		4892D0152570EA2B0008945D /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4892D00F2570EA2B0008945D /* SVProgressHUD.bundle */; };
 		4899CB95256F98710087BFB1 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899CB94256F98710087BFB1 /* Constant.swift */; };
+		48C6404825761B530066C005 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C6404725761B530066C005 /* Protocol.swift */; };
+		48C6404B25762C600066C005 /* SetUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C6404A25762C600066C005 /* SetUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +83,7 @@
 		488F915C256E7DF600747D13 /* WiproWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiproWebService.swift; sourceTree = "<group>"; };
 		488F9163256E804C00747D13 /* WiproTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WiproTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		488F9168256E89A400747D13 /* CanadaInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanadaInfoModel.swift; sourceTree = "<group>"; };
-		488F916D256E8BBD00747D13 /* CanadaInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanadaInfoPresenter.swift; sourceTree = "<group>"; };
+		488F916D256E8BBD00747D13 /* CanadaInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanadaInfoViewModel.swift; sourceTree = "<group>"; };
 		4892CFA32570E6FA0008945D /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebP.m"; sourceTree = "<group>"; };
 		4892CFA42570E6FA0008945D /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		4892CFA52570E6FA0008945D /* SDWebImageCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageCoder.h; sourceTree = "<group>"; };
@@ -148,6 +150,8 @@
 		4892D00F2570EA2B0008945D /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		4892D0102570EA2B0008945D /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
 		4899CB94256F98710087BFB1 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		48C6404725761B530066C005 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		48C6404A25762C600066C005 /* SetUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,11 +194,12 @@
 		488F912A256E391F00747D13 /* WiproTest */ = {
 			isa = PBXGroup;
 			children = (
-				488F916A256E8AF300747D13 /* Model */,
-				488F9153256E7D4E00747D13 /* Helper */,
 				488F916B256E8B0A00747D13 /* AppDelegate */,
+				488F9153256E7D4E00747D13 /* Helper */,
 				488F915E256E7DFE00747D13 /* WebService */,
-				488F916C256E8B3300747D13 /* Presenter */,
+				488F916A256E8AF300747D13 /* Model */,
+				488F916C256E8B3300747D13 /* View */,
+				48C6404925762ADE0066C005 /* ViewModel */,
 				488F9134256E392300747D13 /* Assets.xcassets */,
 				488F9136256E392300747D13 /* LaunchScreen.storyboard */,
 				4892D0162570EB3B0008945D /* Library */,
@@ -219,6 +224,7 @@
 				488F9155256E7D4E00747D13 /* CIError.swift */,
 				488F9151256E59DF00747D13 /* Extension.swift */,
 				4899CB94256F98710087BFB1 /* Constant.swift */,
+				48C6404725761B530066C005 /* Protocol.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -248,14 +254,14 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		488F916C256E8B3300747D13 /* Presenter */ = {
+		488F916C256E8B3300747D13 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				488F914D256E3B4D00747D13 /* CanadaInfoViewController.swift */,
-				488F916D256E8BBD00747D13 /* CanadaInfoPresenter.swift */,
-				488F914F256E506000747D13 /* CanadaInfoCell.swift */,
+				48C6404C25763B430066C005 /* ViewController */,
+				48C6404D25763B520066C005 /* TableViewCell */,
+				48C6404E25763B600066C005 /* ViewSetUp */,
 			);
-			path = Presenter;
+			path = View;
 			sourceTree = "<group>";
 		};
 		4892CFA22570E6FA0008945D /* SDWebImage */ = {
@@ -344,6 +350,38 @@
 				4892D0062570EA2B0008945D /* SVProgressHUD */,
 			);
 			path = Library;
+			sourceTree = "<group>";
+		};
+		48C6404925762ADE0066C005 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				488F916D256E8BBD00747D13 /* CanadaInfoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		48C6404C25763B430066C005 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				488F914D256E3B4D00747D13 /* CanadaInfoViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		48C6404D25763B520066C005 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				488F914F256E506000747D13 /* CanadaInfoCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		48C6404E25763B600066C005 /* ViewSetUp */ = {
+			isa = PBXGroup;
+			children = (
+				48C6404A25762C600066C005 /* SetUpView.swift */,
+			);
+			path = ViewSetUp;
 			sourceTree = "<group>";
 		};
 		A22FDF79562EB2537E56E607 /* Pods */ = {
@@ -455,7 +493,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				488F916E256E8BBD00747D13 /* CanadaInfoPresenter.swift in Sources */,
+				488F916E256E8BBD00747D13 /* CanadaInfoViewModel.swift in Sources */,
 				488F9152256E59DF00747D13 /* Extension.swift in Sources */,
 				4892CFE92570E6FB0008945D /* SDWebImageDownloaderOperation.m in Sources */,
 				488F912C256E391F00747D13 /* AppDelegate.swift in Sources */,
@@ -469,9 +507,11 @@
 				4892D0112570EA2B0008945D /* SVRadialGradientLayer.m in Sources */,
 				4892CFF12570E6FB0008945D /* UIView+WebCache.m in Sources */,
 				4892CFDB2570E6FB0008945D /* MKAnnotationView+WebCache.m in Sources */,
+				48C6404B25762C600066C005 /* SetUpView.swift in Sources */,
 				4892CFE72570E6FB0008945D /* SDWebImageCoder.m in Sources */,
 				488F9159256E7D4E00747D13 /* CIError.swift in Sources */,
 				4892CFE12570E6FB0008945D /* SDWebImageDownloader.m in Sources */,
+				48C6404825761B530066C005 /* Protocol.swift in Sources */,
 				4892D0132570EA2B0008945D /* SVProgressHUD.m in Sources */,
 				4892CFEA2570E6FB0008945D /* SDWebImageTransition.m in Sources */,
 				4892CFED2570E6FB0008945D /* NSImage+WebCache.m in Sources */,

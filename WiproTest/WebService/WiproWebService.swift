@@ -39,4 +39,20 @@ struct httpUtility
         }
         task.resume()
     }
+    
+}
+
+struct CanadaInfoServiceCall
+{
+    private let httpUtilitySession: httpUtility
+    
+    init(_httpUtility: httpUtility) {
+        httpUtilitySession = _httpUtility
+    }
+    func callAPIWithNewSession(completed:@escaping (_ post:CanadaInfoModel) -> Void)
+    {
+        httpUtilitySession.CallAPIwithSession(resultType: CanadaInfoModel.self) { (result) in
+            completed(result)
+        }
+    }
 }
