@@ -19,6 +19,7 @@
 		488F915D256E7DF600747D13 /* WiproWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488F915C256E7DF600747D13 /* WiproWebService.swift */; };
 		488F9169256E89A400747D13 /* CanadaInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488F9168256E89A400747D13 /* CanadaInfoModel.swift */; };
 		488F916E256E8BBD00747D13 /* CanadaInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488F916D256E8BBD00747D13 /* CanadaInfoViewModel.swift */; };
+		488FBE0F2577DDD900EFA9CD /* MockCanadaInfoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FBE0E2577DDD900EFA9CD /* MockCanadaInfoDelegate.swift */; };
 		4892CFDA2570E6FB0008945D /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 4892CFA32570E6FA0008945D /* UIImage+WebP.m */; };
 		4892CFDB2570E6FB0008945D /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4892CFA42570E6FA0008945D /* MKAnnotationView+WebCache.m */; };
 		4892CFDC2570E6FB0008945D /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4892CFAA2570E6FA0008945D /* SDWebImageManager.m */; };
@@ -84,6 +85,7 @@
 		488F9163256E804C00747D13 /* WiproTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WiproTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		488F9168256E89A400747D13 /* CanadaInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanadaInfoModel.swift; sourceTree = "<group>"; };
 		488F916D256E8BBD00747D13 /* CanadaInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanadaInfoViewModel.swift; sourceTree = "<group>"; };
+		488FBE0E2577DDD900EFA9CD /* MockCanadaInfoDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCanadaInfoDelegate.swift; sourceTree = "<group>"; };
 		4892CFA32570E6FA0008945D /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebP.m"; sourceTree = "<group>"; };
 		4892CFA42570E6FA0008945D /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		4892CFA52570E6FA0008945D /* SDWebImageCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageCoder.h; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				488F9142256E392300747D13 /* WiproTestTests.swift */,
+				488FBE0E2577DDD900EFA9CD /* MockCanadaInfoDelegate.swift */,
 				488F9144256E392300747D13 /* Info.plist */,
 			);
 			path = WiproTestTests;
@@ -543,6 +546,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				488FBE0F2577DDD900EFA9CD /* MockCanadaInfoDelegate.swift in Sources */,
 				488F9143256E392300747D13 /* WiproTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

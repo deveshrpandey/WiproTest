@@ -9,14 +9,9 @@
 import XCTest
 @testable import WiproTest
 
-class WiproTestTests: XCTestCase, CanadaInfoDataSource {
+class WiproTestTests: XCTestCase {
     
-
     var viewController: CanadaInfoViewController?
-    var expectation: XCTestExpectation?
-    var data = [CanadaInfoRow]()
-    var errorInfo = String()
-    
     
     override func setUpWithError() throws
     {
@@ -26,26 +21,28 @@ class WiproTestTests: XCTestCase, CanadaInfoDataSource {
     }
 
     override func tearDownWithError() throws {
-        viewController?.canadaViewModel.delegate = nil
         viewController = nil
     }
     
     
     func testCanadaInfoDelegate()
     {
+        let mockDelegate = MockCanadaInfoDelegate(testCase: self)
+        
         let canadaMngr = CanadaViewModel()
-        canadaMngr.delegate = self
+        canadaMngr.delegate = mockDelegate
         
         /// Act
-        expectation = expectation(description: "CanadaInfoData updates") // 3
+        mockDelegate.expectCanadaData()
         canadaMngr.getDataFromAPI()
         /// Assert
-        waitForExpectations(timeout: 10) // 4
+        waitForExpectations(timeout: 10)
         
         do {
-            let result = try XCTUnwrap(data)
+            let result = try XCTUnwrap(mockDelegate.data)
             XCTAssertEqual(result.count, 14)
-        } catch  {
+        }
+        catch  {
             print(error.localizedDescription)
         }
        
@@ -57,23 +54,6 @@ class WiproTestTests: XCTestCase, CanadaInfoDataSource {
         viewController?.refreshControl.sendActions(for: .valueChanged)
         XCTAssert(((viewController?.refreshControl.attributedTitle) != nil))
       }
-    
-    func getCanadaInfoData(data: [CanadaInfoRow], title: String) {
-        if expectation != nil {
-            self.data = data
-        }
-        expectation?.fulfill()
-        expectation = nil
-    }
-    
-    func dataErrorInfo(errorInfo: String) {
-        //dataError
-        if expectation != nil {
-            self.errorInfo = errorInfo
-        }
-        expectation?.fulfill()
-        expectation = nil
-    }
     
    
 }
