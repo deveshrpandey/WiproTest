@@ -6,7 +6,6 @@
 //  Copyright © 2020 Wipro. All rights reserved.
 //
 
-import Foundation
 import XCTest
 
 @testable import WiproTest
